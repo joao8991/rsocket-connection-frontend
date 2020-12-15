@@ -33,7 +33,7 @@ function App() {
     createRSocketConnection(username);
   }
 
-  const renderSqsSide = () => {
+  const renderBackendSide = () => {
     if (messages.isLogged) {
       return (<div>
         <div><h2>{messages.username} is logged in</h2></div>
@@ -71,7 +71,7 @@ function App() {
             <input className="m-2" type="text" placeholder="username" value={username} onChange={handleInputChange} />
             <button className="btn btn-primary m-2" onClick={login}>Login</button>
             <h2 className="text-success">Backend simulator</h2>
-            {renderSqsSide()}
+            {renderBackendSide()}
           </div>
         </div>
       </div>
